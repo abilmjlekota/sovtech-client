@@ -1,0 +1,27 @@
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark text-white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sovtech | Fullstack Engineer Test</a>
+
+    </div>
+</nav>
+
+<div class="container mt-3">
+    <p class="h1">Categories</p>
+    <div *ngIf="isError" class="alert alert-danger d-flex align-items-center" role="alert">
+        <div>
+        {{error}}
+        </div>
+    </div>
+    <div class="row">
+        <div  *ngFor="let category of categories"  class="col-md-6 col-lg-4">
+            <div (click)="onCategorySelected(category)" class="card text-bg-primary mb-3 col-12" >
+                <div class="card-body">
+                <h5 class="card-title">{{category}}</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+  

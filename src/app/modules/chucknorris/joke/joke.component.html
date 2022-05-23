@@ -1,0 +1,21 @@
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark text-white">
+    <div class="container-fluid">
+      <button (click)="onBack()" class="btn btn-sm btn-light">Back</button>
+    </div>
+</nav>
+<div class="container">
+    <div *ngIf="isError" class="alert alert-danger d-flex align-items-center" role="alert">
+        <div>
+        {{error}}
+        </div>
+    </div>
+    <div class="col-12 bg-secondary p-3 m-3 rounded row">
+        <div class="col-md-8 col-lg-10">
+            <p class="h3 text-white">{{joke.value}}</p>
+
+        </div>
+        <div class="col-md-4 col-lg-2">
+            <img src="https://c.tenor.com/YdVZeorZIJgAAAAS/baby-laugh.gif" class="rounded float-end" alt="...">
+        </div>
+    </div>
+</div>
